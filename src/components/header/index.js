@@ -76,6 +76,7 @@ export const Header = () => {
             setEmail('');
             setPhone('');
             toast.success('Email sent successfully', {
+              toastId: 'form_submit_Top3',
               position: 'top-right',
               autoClose: 5000,
               hideProgressBar: false,
@@ -90,6 +91,7 @@ export const Header = () => {
           },
           (error) => {
             toast.error('Email sent no successfully', {
+              toastId: 'form_submit_Top3_error',
               position: 'top-right',
               autoClose: 5000,
               hideProgressBar: false,
@@ -207,6 +209,7 @@ export const Header = () => {
       <Image className={style.header__decor} src={headerDecor} alt="bg" />
       <Image className={style.header__decorMobile} src={headerDecorMobile} alt="bg" />
       <ToastContainer
+        toastId="form_submit_Top3"
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
